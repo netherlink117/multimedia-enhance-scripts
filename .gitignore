@@ -1,0 +1,4 @@
+# ignore binary executables and libreries
+*.dll
+*.exe
+*/
