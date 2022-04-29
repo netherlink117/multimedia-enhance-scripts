@@ -174,12 +174,12 @@ if %scale% gtr 100 (
     set "scalator=noscaled"
     echo Scalation aborted by argument -ns
   ) else (
-    set "scalator=prob3"
+    set "scalator=prob1"
   )
 ) else (
   if "%fesc%"=="1" (
     echo Scaled resolution: %outputwidth%x%outputheight% ^(%scale%%%^) %scale:~0,-2%.%scale:~-2%
-    set "scalator=prob3"
+    set "scalator=prob1"
   ) else (
     echo Video is on max resolution, no scalation needed.
   )
