@@ -127,7 +127,7 @@ if "%workspace%"=="null" (
 if "%outputpath%"=="null" (
   set "outputpath=%fd%%fp%"
 ) else (
-  set "outputpath=%workspace%"
+  set "outputpath=%outputpath%"
 )
 set "workspace=%workspace%\%fn%"
 echo Creating workspace...
@@ -264,7 +264,7 @@ if "%interpolator%"=="nointerpolated" (
   )
 ) else (
   mkdir "%workspace%\interpolated"
-  start /wait rife-ncnn-vulkan.exe -v -x -u -m "rife-v4" -j 1:1:1 -f "%%06d.png" -o "%workspace%\interpolated" -i "%workspace%\scaled"
+  start /wait rife-ncnn-vulkan.exe -v -u -m "rife-v4" -j 1:1:1 -f "%%06d.png" -o "%workspace%\interpolated" -i "%workspace%\scaled"
   set "merge=true"
 )
 echo;
